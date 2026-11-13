@@ -1,6 +1,4 @@
 # Báo cáo cá nhân — Day 6
-
-
 ## Dữ liệu và pipeline
 
 ### 1. Chủ đề, nguồn/quyền, số trang và quy tắc tính trang
@@ -318,4 +316,173 @@ Kết quả chi tiết:
 
 | Question ID | Strategy A | Strategy B | Strategy C |
 |---|---:|---:|---:|
-| `T01` | 2 | 0
+| `T01` | 2 | 0 | 0 |
+| `T02` | 1 | 1 | 1 |
+| `T03` | 2 | 2 | 2 |
+| `T04` | 2 | 0 | 0 |
+| `T05` | 0 | 0 | 2 |
+| **Tổng** | **7/10** | **3/10** | **5/10** |
+| **Trung bình /2** | **1,40** | **0,60** | **1,00** |
+
+Strategy A có Grounding cao nhất trên tập test này.
+
+Strategy C cải thiện kết quả so với B nhờ tìm được bằng chứng cho câu `T05` khi áp dụng metadata filter.
+
+Đây là đánh giá chất lượng bằng chứng truy xuất, không phải độ chính xác câu trả lời của LLM.
+
+### 4. Đường dẫn trace, nhãn thủ công và cách chọn mẫu
+
+Các file kết quả được lưu tại `starter/data/results/`.
+
+| File | Nội dung |
+|---|---|
+| `retrieval_top3.jsonl` | Kết quả Top-3 của 20 câu hỏi trên ba chiến lược |
+| `evaluation_detail.csv` | Kết quả đánh giá từng câu |
+| `evaluation_summary.json` | Tổng hợp chỉ số dev/test |
+| `ingestion_statistics.json` | Thống kê ingestion và chunk |
+| `aligned_coherence_review.md` | Mẫu 10 vị trí nguồn để đánh giá |
+| `aligned_coherence_scored.md` | Nhãn và lý do chấm Coherence |
+| `aligned_coherence_scores.csv` | Điểm Coherence |
+| `manual_review.md` | Nội dung 45 kết quả Top-3 của tập test |
+| `grounding_metadata_audit.md` | Nhận xét Grounding và Metadata |
+| `grounding_scores_test.csv` | Điểm Grounding của 15 trường hợp |
+| `metadata_audit_test.csv` | Kết quả kiểm tra metadata |
+
+Cách chọn mẫu:
+
+- **Retrieval:** Sử dụng toàn bộ 20 câu benchmark.
+- **Coherence:** Chọn 10 vị trí nguồn giống nhau cho A, B và C.
+- **Metadata:** Kiểm tra 45 kết quả Top-3 của 5 câu test.
+- **Grounding:** Chấm Top-3 của 5 câu test cho từng chiến lược.
+
+Nhãn thủ công được đánh giá với sự hỗ trợ của AI và đối chiếu nội dung chunk. Vì vậy vẫn có nguy cơ thiên lệch và cần rà soát trước khi nộp chính thức.
+
+## Phân tích và kết luận
+
+### 1. So sánh A–B và B–C
+
+#### So sánh A–B
+
+Strategy A sử dụng chunk cố định, còn Strategy B chia theo đoạn văn.
+
+| Chỉ số | A | B |
+|---|---:|---:|
+| Chunk count | 614 | 708 |
+| Coherence trung bình | 0,40 | 1,50 |
+| Dev Hit@1 gần đúng | 3/15 | 5/15 |
+| Dev Evidence Hit@3 proxy | 5/15 | 6/15 |
+| Test Grounding | 1,40 | 0,60 |
+
+B cải thiện Coherence và các chỉ số truy xuất gần đúng trên dev.
+
+Tuy nhiên, Grounding trên test lại thấp hơn A. Điều này cho thấy chunk mạch lạc hơn chưa chắc được hệ thống xếp hạng cao hơn trong truy xuất.
+
+#### So sánh B–C
+
+B và C sử dụng cùng chunk và embedding. Khác biệt duy nhất là C áp dụng metadata filter khi câu hỏi yêu cầu.
+
+| Chỉ số | B | C |
+|---|---:|---:|
+| Chunk count | 708 | 708 |
+| Coherence | 1,50 | 1,50 |
+| Dev Hit@1 gần đúng | 5/15 | 5/15 |
+| Dev Evidence Hit@3 proxy | 6/15 | 6/15 |
+| Test Grounding | 0,60 | 1,00 |
+| Tuân thủ filter T05 | 1/3 | 3/3 |
+
+C cải thiện khả năng lọc kết quả và tìm được bằng chứng trả lời câu `T05`.
+
+Điều này cho thấy metadata filter có ích khi câu hỏi xác định rõ phạm vi tài liệu cần tìm.
+
+### 2. Hai ví dụ truy xuất sai
+
+**Ví dụ 1 — `T02`: Khác biệt giữa `del` và `pop()`**
+
+- Nguồn đúng: `datastructures.txt`.
+- Câu hỏi: Khác biệt giữa `del` theo chỉ số và `pop()` của list là gì?
+- Đáp án: `del` xóa phần tử mà không trả về giá trị; `pop()` trả về phần tử đã xóa.
+
+Các chiến lược trả về ví dụ liên quan đến `pop()` hoặc `del`, nhưng không tìm được đoạn giải thích đầy đủ sự khác biệt giữa hai thao tác.
+
+Kết quả Grounding:
+
+| Strategy | Điểm |
+|---|---:|
+| A | 1 |
+| B | 1 |
+| C | 1 |
+
+Nguyên nhân là truy xuất được nội dung có từ khóa liên quan nhưng thiếu phần so sánh cần thiết.
+
+**Ví dụ 2 — `T04`: Chức năng phím F3**
+
+- Nguồn đúng: `appendix.txt`.
+- Câu hỏi: Trong interactive shell mới, phím F3 dùng để làm gì?
+- Đáp án: F3 bật paste mode; nhấn lại để quay về prompt thường.
+
+Strategy A tìm được đoạn giải thích trực tiếp chức năng F3.
+
+Strategy B và C trả về các đoạn về interactive interpreter, mục lục hoặc công cụ khác, nhưng không có bằng chứng trả lời trực tiếp.
+
+Kết quả Grounding:
+
+| Strategy | Điểm |
+|---|---:|
+| A | 2 |
+| B | 0 |
+| C | 0 |
+
+Trường hợp này cho thấy thay đổi cách chia chunk có thể làm thay đổi thứ hạng kết quả và khiến bằng chứng cần thiết không xuất hiện trong Top-3.
+
+### 3. Chiến lược chọn, đánh đổi và điều kiện áp dụng
+
+Tôi chọn **Strategy C — Paragraph-aware chunking kết hợp metadata filter** để tiếp tục phát triển.
+
+Lý do:
+
+- Coherence tốt hơn Strategy A.
+- Giữ nguyên cách chia chunk của Strategy B.
+- Hỗ trợ lọc kết quả theo `section`.
+- Tìm được bằng chứng cho câu `T05` khi áp dụng filter.
+- Có thể truy vết chunk về tài liệu nguồn.
+
+Tuy nhiên, Strategy A có Grounding cao hơn trên 5 câu test.
+
+Vì vậy, lựa chọn C ưu tiên khả năng giữ ngữ cảnh và lọc nguồn, không có nghĩa C tốt nhất trên tất cả chỉ số.
+
+### 4. Hạn chế của dữ liệu, nhãn, test nhỏ và đo thời gian/chi phí
+
+Các hạn chế chính:
+
+- Corpus chỉ gồm tài liệu Python Tutorial.
+- Benchmark có 20 câu, trong đó chỉ 5 câu test.
+- Một câu thay đổi kết quả có thể làm tỷ lệ trên test thay đổi 20 điểm phần trăm.
+- Embedding model sử dụng chủ yếu cho văn bản tiếng Anh, trong khi benchmark bằng tiếng Việt.
+- Chỉ số Retrieval Accuracy tự động chưa kiểm tra đầy đủ bằng chứng theo định nghĩa nghiêm ngặt.
+- Grounding và Coherence có yếu tố đánh giá chủ quan.
+- Metadata audit chưa đối chiếu độc lập mọi trường với nguồn gốc.
+- Thời gian truy xuất chưa được đo lặp lại nhiều lần.
+- Chi phí API bằng 0 nhưng chưa tính chi phí phần cứng.
+
+Vì vậy, kết quả chỉ phản ánh thí nghiệm trên corpus và benchmark hiện tại, không thể khẳng định chiến lược nào tốt nhất cho mọi hệ thống RAG.
+
+### 5. Nếu làm lại hoặc mở rộng, cải tiến gì?
+
+Nếu tiếp tục phát triển, tôi sẽ:
+
+1. Cải thiện chunking để không cắt ngang câu, đoạn mã hoặc phần giải thích.
+2. Kết hợp semantic search với keyword search như BM25.
+3. Thử embedding model đa ngữ phù hợp hơn với câu hỏi tiếng Việt.
+4. Mở rộng benchmark và tăng số câu test.
+5. Bổ sung thêm các câu hỏi có metadata filter.
+6. Kiểm chứng Evidence Hit@3 thủ công theo đúng nguồn/trang và bằng chứng đầy đủ.
+7. Đo thời gian ingestion và retrieval nhiều lần để lấy kết quả trung bình.
+8. Bổ sung khả năng cập nhật tài liệu và tái tạo vector khi nội dung nguồn thay đổi.
+
+### Kết luận
+
+Qua bài thực hành Day 06, tôi đã xây dựng pipeline đọc và chuẩn hóa tài liệu TXT, chia chunk, tạo embedding, lưu vector vào ChromaDB và truy xuất thông tin theo ba chiến lược A/B/C.
+
+Kết quả cho thấy cách chia chunk ảnh hưởng rõ đến tính mạch lạc của nội dung. Metadata filter giúp giới hạn phạm vi tìm kiếm khi câu hỏi có điều kiện cụ thể.
+
+Strategy C được chọn để tiếp tục phát triển vì kết hợp được chunk theo đoạn văn và khả năng lọc metadata. Tuy nhiên, kết quả Grounding trên tập test nhỏ cho thấy vẫn cần cải thiện khả năng tìm đúng bằng chứng và kiểm chứng đánh giá trước khi áp dụng thực tế.
