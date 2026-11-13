@@ -1,0 +1,31 @@
+﻿position,strategy,score_0_2,reason
+1,A,0,"Mở đầu và kết thúc giữa câu, mất ngữ cảnh về interactive shell và lỗi."
+1,B,1,"Giải thích cách interpreter xử lý lỗi đầy đủ ở đoạn đầu, nhưng câu cuối bị cắt."
+1,C,1,"Giải thích cách interpreter xử lý lỗi đầy đủ ở đoạn đầu, nhưng câu cuối bị cắt."
+2,A,1,"Ví dụ class C và phương thức còn hiểu được, nhưng đầu và cuối chunk bị cắt."
+2,B,1,"Đoạn giải thích f/g/h rõ, nhưng ví dụ Bag chưa đủ phương thức."
+2,C,1,"Đoạn giải thích f/g/h rõ, nhưng ví dụ Bag chưa đủ phương thức."
+3,A,0,"Bắt đầu giữa giải thích sequence pattern, kết thúc giữa mapping pattern."
+3,B,2,Hai ý về mapping pattern và as pattern đều có ví dụ đủ nghĩa.
+3,C,2,Hai ý về mapping pattern và as pattern đều có ví dụ đủ nghĩa.
+4,A,0,"Mở đầu giữa câu, ví dụ deque bị cắt giữa lệnh."
+4,B,2,Đoạn giải thích hạn chế của list làm queue trọn vẹn.
+4,C,2,Đoạn giải thích hạn chế của list làm queue trọn vẹn.
+5,A,1,"Đoạn giải thích re-raise và ví dụ try/except rõ, nhưng kết thúc giữa câu mới."
+5,B,1,"Giải thích bắt Exception rõ, nhưng ví dụ code chỉ có import sys nên thiếu minh họa."
+5,C,1,"Giải thích bắt Exception rõ, nhưng ví dụ code chỉ có import sys nên thiếu minh họa."
+6,A,0,"Mở đầu giữa biểu thức và kết thúc giữa từ precision, thiếu ngữ cảnh."
+6,B,1,"Phép tính và kết quả làm tròn có thể theo dõi, nhưng thiếu định nghĩa J/N ở phần trước."
+6,C,1,"Phép tính và kết quả làm tròn có thể theo dõi, nhưng thiếu định nghĩa J/N ở phần trước."
+7,A,0,"Bắt đầu giữa từ, kết thúc giữa câu của mục mới."
+7,B,1,"Ý lưu lịch sử Python đầy đủ, nhưng câu đầu là phần đuôi ý khác."
+7,C,1,"Ý lưu lịch sử Python đầy đủ, nhưng câu đầu là phần đuôi ý khác."
+8,A,1,"Giải thích import * còn hiểu được, nhưng ví dụ import as bị cắt."
+8,B,2,Giải thích nhược điểm import * và ngoại lệ interactive trọn ý.
+8,C,2,Giải thích nhược điểm import * và ngoại lệ interactive trọn ý.
+9,A,1,"Lời khuyên dùng queue đủ ý, nhưng mở đầu giữa từ và cuối bị cắt."
+9,B,2,Lời khuyên về queue để phối hợp thread trọn vẹn; heading Logging riêng biệt.
+9,C,2,Lời khuyên về queue để phối hợp thread trọn vẹn; heading Logging riêng biệt.
+10,A,0,"Mở đầu thiếu mục trước, kết thúc giữa câu về Python Cookbook."
+10,B,2,Hai mục đường dẫn docs.python.org và PyPI có mô tả hoàn chỉnh.
+10,C,2,Hai mục đường dẫn docs.python.org và PyPI có mô tả hoàn chỉnh.

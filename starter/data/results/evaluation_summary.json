@@ -1,0 +1,50 @@
+[
+  {
+    "split": "dev",
+    "strategy": "A",
+    "questions": 15,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_proxy": 0.3333,
+    "filter_compliance": 0.3333
+  },
+  {
+    "split": "dev",
+    "strategy": "B",
+    "questions": 15,
+    "hit_at_1": 0.3333,
+    "evidence_hit_at_3_proxy": 0.4,
+    "filter_compliance": 0.0
+  },
+  {
+    "split": "dev",
+    "strategy": "C",
+    "questions": 15,
+    "hit_at_1": 0.3333,
+    "evidence_hit_at_3_proxy": 0.4,
+    "filter_compliance": 1.0
+  },
+  {
+    "split": "test",
+    "strategy": "A",
+    "questions": 5,
+    "hit_at_1": 0.4,
+    "evidence_hit_at_3_proxy": 0.4,
+    "filter_compliance": 0.0
+  },
+  {
+    "split": "test",
+    "strategy": "B",
+    "questions": 5,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_proxy": 0.2,
+    "filter_compliance": 0.0
+  },
+  {
+    "split": "test",
+    "strategy": "C",
+    "questions": 5,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_proxy": 0.4,
+    "filter_compliance": 1.0
+  }
+]

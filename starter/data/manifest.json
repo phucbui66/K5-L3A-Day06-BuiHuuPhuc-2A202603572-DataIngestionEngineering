@@ -1,0 +1,901 @@
+{
+  "dataset": "Python Documentation - Tutorial",
+  "version": "3.15",
+  "source_url": "https://docs.python.org/3.15/",
+  "created_at": "2026-11-13T19:14:34.956289+00:00",
+  "minimum_unit_chars": 1500,
+  "total_documents": 17,
+  "total_units": 90,
+  "total_normalized_chars": 259585,
+  "skipped_files": [],
+  "documents": [
+    {
+      "document_id": "python_appendix",
+      "source": "appendix.txt",
+      "source_path": "data/raw/tutorial/appendix.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "9903f9219652be15b699d279fb00bf0f469146a59d965af96f73935f7c5b6a49",
+      "normalized_char_count": 5325,
+      "unit_count": 2,
+      "units": [
+        {
+          "unit_id": "python_appendix_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2697,
+          "char_count": 2697
+        },
+        {
+          "unit_id": "python_appendix_unit_002",
+          "page": 2,
+          "start_offset": 2697,
+          "end_offset": 5325,
+          "char_count": 2628
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_appetite",
+      "source": "appetite.txt",
+      "source_path": "data/raw/tutorial/appetite.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "89ef124ae698b3205ba90b90622713bf692158e38cade640b38091c63caf4f1b",
+      "normalized_char_count": 4472,
+      "unit_count": 1,
+      "units": [
+        {
+          "unit_id": "python_appetite_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 4472,
+          "char_count": 4472
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_classes",
+      "source": "classes.txt",
+      "source_path": "data/raw/tutorial/classes.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "f2cf81a71c449ede6cd2425221f274e7d5fcf784ec41830d75da0b77e5c9e5df",
+      "normalized_char_count": 36110,
+      "unit_count": 13,
+      "units": [
+        {
+          "unit_id": "python_classes_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2976,
+          "char_count": 2976
+        },
+        {
+          "unit_id": "python_classes_unit_002",
+          "page": 2,
+          "start_offset": 2976,
+          "end_offset": 5687,
+          "char_count": 2711
+        },
+        {
+          "unit_id": "python_classes_unit_003",
+          "page": 3,
+          "start_offset": 5687,
+          "end_offset": 8536,
+          "char_count": 2849
+        },
+        {
+          "unit_id": "python_classes_unit_004",
+          "page": 4,
+          "start_offset": 8536,
+          "end_offset": 11220,
+          "char_count": 2684
+        },
+        {
+          "unit_id": "python_classes_unit_005",
+          "page": 5,
+          "start_offset": 11220,
+          "end_offset": 14013,
+          "char_count": 2793
+        },
+        {
+          "unit_id": "python_classes_unit_006",
+          "page": 6,
+          "start_offset": 14013,
+          "end_offset": 17009,
+          "char_count": 2996
+        },
+        {
+          "unit_id": "python_classes_unit_007",
+          "page": 7,
+          "start_offset": 17009,
+          "end_offset": 19995,
+          "char_count": 2986
+        },
+        {
+          "unit_id": "python_classes_unit_008",
+          "page": 8,
+          "start_offset": 19995,
+          "end_offset": 22738,
+          "char_count": 2743
+        },
+        {
+          "unit_id": "python_classes_unit_009",
+          "page": 9,
+          "start_offset": 22738,
+          "end_offset": 25312,
+          "char_count": 2574
+        },
+        {
+          "unit_id": "python_classes_unit_010",
+          "page": 10,
+          "start_offset": 25312,
+          "end_offset": 28282,
+          "char_count": 2970
+        },
+        {
+          "unit_id": "python_classes_unit_011",
+          "page": 11,
+          "start_offset": 28282,
+          "end_offset": 31120,
+          "char_count": 2838
+        },
+        {
+          "unit_id": "python_classes_unit_012",
+          "page": 12,
+          "start_offset": 31120,
+          "end_offset": 33891,
+          "char_count": 2771
+        },
+        {
+          "unit_id": "python_classes_unit_013",
+          "page": 13,
+          "start_offset": 33891,
+          "end_offset": 36110,
+          "char_count": 2219
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_controlflow",
+      "source": "controlflow.txt",
+      "source_path": "data/raw/tutorial/controlflow.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "24baf5dcc8902a2340efe633434d29b1ea4903c09bc91630847fe6a80fd97af4",
+      "normalized_char_count": 38474,
+      "unit_count": 13,
+      "units": [
+        {
+          "unit_id": "python_controlflow_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2955,
+          "char_count": 2955
+        },
+        {
+          "unit_id": "python_controlflow_unit_002",
+          "page": 2,
+          "start_offset": 2955,
+          "end_offset": 5881,
+          "char_count": 2926
+        },
+        {
+          "unit_id": "python_controlflow_unit_003",
+          "page": 3,
+          "start_offset": 5881,
+          "end_offset": 8866,
+          "char_count": 2985
+        },
+        {
+          "unit_id": "python_controlflow_unit_004",
+          "page": 4,
+          "start_offset": 8866,
+          "end_offset": 11830,
+          "char_count": 2964
+        },
+        {
+          "unit_id": "python_controlflow_unit_005",
+          "page": 5,
+          "start_offset": 11830,
+          "end_offset": 14571,
+          "char_count": 2741
+        },
+        {
+          "unit_id": "python_controlflow_unit_006",
+          "page": 6,
+          "start_offset": 14571,
+          "end_offset": 17135,
+          "char_count": 2564
+        },
+        {
+          "unit_id": "python_controlflow_unit_007",
+          "page": 7,
+          "start_offset": 17135,
+          "end_offset": 20121,
+          "char_count": 2986
+        },
+        {
+          "unit_id": "python_controlflow_unit_008",
+          "page": 8,
+          "start_offset": 20121,
+          "end_offset": 23112,
+          "char_count": 2991
+        },
+        {
+          "unit_id": "python_controlflow_unit_009",
+          "page": 9,
+          "start_offset": 23112,
+          "end_offset": 26075,
+          "char_count": 2963
+        },
+        {
+          "unit_id": "python_controlflow_unit_010",
+          "page": 10,
+          "start_offset": 26075,
+          "end_offset": 29037,
+          "char_count": 2962
+        },
+        {
+          "unit_id": "python_controlflow_unit_011",
+          "page": 11,
+          "start_offset": 29037,
+          "end_offset": 31654,
+          "char_count": 2617
+        },
+        {
+          "unit_id": "python_controlflow_unit_012",
+          "page": 12,
+          "start_offset": 31654,
+          "end_offset": 34579,
+          "char_count": 2925
+        },
+        {
+          "unit_id": "python_controlflow_unit_013",
+          "page": 13,
+          "start_offset": 34579,
+          "end_offset": 38474,
+          "char_count": 3895
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_datastructures",
+      "source": "datastructures.txt",
+      "source_path": "data/raw/tutorial/datastructures.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "c80eeb9605dddca2ed02dc555ccd299376677672f0d4770c86d1b4601b2f2f28",
+      "normalized_char_count": 26619,
+      "unit_count": 9,
+      "units": [
+        {
+          "unit_id": "python_datastructures_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2791,
+          "char_count": 2791
+        },
+        {
+          "unit_id": "python_datastructures_unit_002",
+          "page": 2,
+          "start_offset": 2791,
+          "end_offset": 5620,
+          "char_count": 2829
+        },
+        {
+          "unit_id": "python_datastructures_unit_003",
+          "page": 3,
+          "start_offset": 5620,
+          "end_offset": 8615,
+          "char_count": 2995
+        },
+        {
+          "unit_id": "python_datastructures_unit_004",
+          "page": 4,
+          "start_offset": 8615,
+          "end_offset": 11341,
+          "char_count": 2726
+        },
+        {
+          "unit_id": "python_datastructures_unit_005",
+          "page": 5,
+          "start_offset": 11341,
+          "end_offset": 14005,
+          "char_count": 2664
+        },
+        {
+          "unit_id": "python_datastructures_unit_006",
+          "page": 6,
+          "start_offset": 14005,
+          "end_offset": 16915,
+          "char_count": 2910
+        },
+        {
+          "unit_id": "python_datastructures_unit_007",
+          "page": 7,
+          "start_offset": 16915,
+          "end_offset": 19814,
+          "char_count": 2899
+        },
+        {
+          "unit_id": "python_datastructures_unit_008",
+          "page": 8,
+          "start_offset": 19814,
+          "end_offset": 22688,
+          "char_count": 2874
+        },
+        {
+          "unit_id": "python_datastructures_unit_009",
+          "page": 9,
+          "start_offset": 22688,
+          "end_offset": 26619,
+          "char_count": 3931
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_errors",
+      "source": "errors.txt",
+      "source_path": "data/raw/tutorial/errors.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "130935952b23ce0b7bf2ebacb987b83a662182db86a3e3330a3ed3dfb8787198",
+      "normalized_char_count": 23483,
+      "unit_count": 8,
+      "units": [
+        {
+          "unit_id": "python_errors_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2951,
+          "char_count": 2951
+        },
+        {
+          "unit_id": "python_errors_unit_002",
+          "page": 2,
+          "start_offset": 2951,
+          "end_offset": 5929,
+          "char_count": 2978
+        },
+        {
+          "unit_id": "python_errors_unit_003",
+          "page": 3,
+          "start_offset": 5929,
+          "end_offset": 8923,
+          "char_count": 2994
+        },
+        {
+          "unit_id": "python_errors_unit_004",
+          "page": 4,
+          "start_offset": 8923,
+          "end_offset": 11831,
+          "char_count": 2908
+        },
+        {
+          "unit_id": "python_errors_unit_005",
+          "page": 5,
+          "start_offset": 11831,
+          "end_offset": 14830,
+          "char_count": 2999
+        },
+        {
+          "unit_id": "python_errors_unit_006",
+          "page": 6,
+          "start_offset": 14830,
+          "end_offset": 17733,
+          "char_count": 2903
+        },
+        {
+          "unit_id": "python_errors_unit_007",
+          "page": 7,
+          "start_offset": 17733,
+          "end_offset": 20501,
+          "char_count": 2768
+        },
+        {
+          "unit_id": "python_errors_unit_008",
+          "page": 8,
+          "start_offset": 20501,
+          "end_offset": 23483,
+          "char_count": 2982
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_floatingpoint",
+      "source": "floatingpoint.txt",
+      "source_path": "data/raw/tutorial/floatingpoint.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "783ed86151eb1fcc1b1c2d8241a510698289d544359004c9f9d9cdba0557e894",
+      "normalized_char_count": 12246,
+      "unit_count": 4,
+      "units": [
+        {
+          "unit_id": "python_floatingpoint_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2980,
+          "char_count": 2980
+        },
+        {
+          "unit_id": "python_floatingpoint_unit_002",
+          "page": 2,
+          "start_offset": 2980,
+          "end_offset": 5692,
+          "char_count": 2712
+        },
+        {
+          "unit_id": "python_floatingpoint_unit_003",
+          "page": 3,
+          "start_offset": 5692,
+          "end_offset": 8404,
+          "char_count": 2712
+        },
+        {
+          "unit_id": "python_floatingpoint_unit_004",
+          "page": 4,
+          "start_offset": 8404,
+          "end_offset": 12246,
+          "char_count": 3842
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_index",
+      "source": "index.txt",
+      "source_path": "data/raw/tutorial/index.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "a9513d6345b055c7173694b4b5b29861d5e76717ea5fbf43bc69fa4470358b1a",
+      "normalized_char_count": 6990,
+      "unit_count": 2,
+      "units": [
+        {
+          "unit_id": "python_index_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2993,
+          "char_count": 2993
+        },
+        {
+          "unit_id": "python_index_unit_002",
+          "page": 2,
+          "start_offset": 2993,
+          "end_offset": 6990,
+          "char_count": 3997
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_inputoutput",
+      "source": "inputoutput.txt",
+      "source_path": "data/raw/tutorial/inputoutput.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "19864501423f20365b120c266df5667a1020067c46df6b57d8cc934992e46609",
+      "normalized_char_count": 19411,
+      "unit_count": 7,
+      "units": [
+        {
+          "unit_id": "python_inputoutput_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2995,
+          "char_count": 2995
+        },
+        {
+          "unit_id": "python_inputoutput_unit_002",
+          "page": 2,
+          "start_offset": 2995,
+          "end_offset": 5934,
+          "char_count": 2939
+        },
+        {
+          "unit_id": "python_inputoutput_unit_003",
+          "page": 3,
+          "start_offset": 5934,
+          "end_offset": 8714,
+          "char_count": 2780
+        },
+        {
+          "unit_id": "python_inputoutput_unit_004",
+          "page": 4,
+          "start_offset": 8714,
+          "end_offset": 11704,
+          "char_count": 2990
+        },
+        {
+          "unit_id": "python_inputoutput_unit_005",
+          "page": 5,
+          "start_offset": 11704,
+          "end_offset": 14646,
+          "char_count": 2942
+        },
+        {
+          "unit_id": "python_inputoutput_unit_006",
+          "page": 6,
+          "start_offset": 14646,
+          "end_offset": 17306,
+          "char_count": 2660
+        },
+        {
+          "unit_id": "python_inputoutput_unit_007",
+          "page": 7,
+          "start_offset": 17306,
+          "end_offset": 19411,
+          "char_count": 2105
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_interactive",
+      "source": "interactive.txt",
+      "source_path": "data/raw/tutorial/interactive.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "23e3bbcdc4fdebc340182cffb325fdfb023dc010adb0561c68c4869b421e1e90",
+      "normalized_char_count": 2118,
+      "unit_count": 1,
+      "units": [
+        {
+          "unit_id": "python_interactive_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2118,
+          "char_count": 2118
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_interpreter",
+      "source": "interpreter.txt",
+      "source_path": "data/raw/tutorial/interpreter.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "7fc1528ec3f706f6faccd01c63f4bea5f63011517ca6adc1de6198c1306e987a",
+      "normalized_char_count": 6112,
+      "unit_count": 2,
+      "units": [
+        {
+          "unit_id": "python_interpreter_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2877,
+          "char_count": 2877
+        },
+        {
+          "unit_id": "python_interpreter_unit_002",
+          "page": 2,
+          "start_offset": 2877,
+          "end_offset": 6112,
+          "char_count": 3235
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_introduction",
+      "source": "introduction.txt",
+      "source_path": "data/raw/tutorial/introduction.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "3b2b3ee6a51fa0ab05a53dad40764f2c989d4b295dbb7048ebfafb263b3be697",
+      "normalized_char_count": 18091,
+      "unit_count": 6,
+      "units": [
+        {
+          "unit_id": "python_introduction_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2934,
+          "char_count": 2934
+        },
+        {
+          "unit_id": "python_introduction_unit_002",
+          "page": 2,
+          "start_offset": 2934,
+          "end_offset": 5895,
+          "char_count": 2961
+        },
+        {
+          "unit_id": "python_introduction_unit_003",
+          "page": 3,
+          "start_offset": 5895,
+          "end_offset": 8830,
+          "char_count": 2935
+        },
+        {
+          "unit_id": "python_introduction_unit_004",
+          "page": 4,
+          "start_offset": 8830,
+          "end_offset": 11792,
+          "char_count": 2962
+        },
+        {
+          "unit_id": "python_introduction_unit_005",
+          "page": 5,
+          "start_offset": 11792,
+          "end_offset": 14782,
+          "char_count": 2990
+        },
+        {
+          "unit_id": "python_introduction_unit_006",
+          "page": 6,
+          "start_offset": 14782,
+          "end_offset": 18091,
+          "char_count": 3309
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_modules",
+      "source": "modules.txt",
+      "source_path": "data/raw/tutorial/modules.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "e7fa8fa6b8818795a67da82496490ba9ba3cfdb8082d9ffabc98d58ab36dfbbf",
+      "normalized_char_count": 24064,
+      "unit_count": 9,
+      "units": [
+        {
+          "unit_id": "python_modules_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2771,
+          "char_count": 2771
+        },
+        {
+          "unit_id": "python_modules_unit_002",
+          "page": 2,
+          "start_offset": 2771,
+          "end_offset": 5734,
+          "char_count": 2963
+        },
+        {
+          "unit_id": "python_modules_unit_003",
+          "page": 3,
+          "start_offset": 5734,
+          "end_offset": 8519,
+          "char_count": 2785
+        },
+        {
+          "unit_id": "python_modules_unit_004",
+          "page": 4,
+          "start_offset": 8519,
+          "end_offset": 11347,
+          "char_count": 2828
+        },
+        {
+          "unit_id": "python_modules_unit_005",
+          "page": 5,
+          "start_offset": 11347,
+          "end_offset": 13424,
+          "char_count": 2077
+        },
+        {
+          "unit_id": "python_modules_unit_006",
+          "page": 6,
+          "start_offset": 13424,
+          "end_offset": 16026,
+          "char_count": 2602
+        },
+        {
+          "unit_id": "python_modules_unit_007",
+          "page": 7,
+          "start_offset": 16026,
+          "end_offset": 19001,
+          "char_count": 2975
+        },
+        {
+          "unit_id": "python_modules_unit_008",
+          "page": 8,
+          "start_offset": 19001,
+          "end_offset": 21582,
+          "char_count": 2581
+        },
+        {
+          "unit_id": "python_modules_unit_009",
+          "page": 9,
+          "start_offset": 21582,
+          "end_offset": 24064,
+          "char_count": 2482
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_stdlib",
+      "source": "stdlib.txt",
+      "source_path": "data/raw/tutorial/stdlib.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "d26eb8238a453878746515c1490cd898935eda31172d9db22e250246962dcf5b",
+      "normalized_char_count": 10852,
+      "unit_count": 4,
+      "units": [
+        {
+          "unit_id": "python_stdlib_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2988,
+          "char_count": 2988
+        },
+        {
+          "unit_id": "python_stdlib_unit_002",
+          "page": 2,
+          "start_offset": 2988,
+          "end_offset": 5785,
+          "char_count": 2797
+        },
+        {
+          "unit_id": "python_stdlib_unit_003",
+          "page": 3,
+          "start_offset": 5785,
+          "end_offset": 8680,
+          "char_count": 2895
+        },
+        {
+          "unit_id": "python_stdlib_unit_004",
+          "page": 4,
+          "start_offset": 8680,
+          "end_offset": 10852,
+          "char_count": 2172
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_stdlib2",
+      "source": "stdlib2.txt",
+      "source_path": "data/raw/tutorial/stdlib2.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "3212dcf77e186d4e99d8eb4ac98e3054fb2d6c27c40684c82e202c9d8d934f98",
+      "normalized_char_count": 14592,
+      "unit_count": 5,
+      "units": [
+        {
+          "unit_id": "python_stdlib2_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2982,
+          "char_count": 2982
+        },
+        {
+          "unit_id": "python_stdlib2_unit_002",
+          "page": 2,
+          "start_offset": 2982,
+          "end_offset": 5821,
+          "char_count": 2839
+        },
+        {
+          "unit_id": "python_stdlib2_unit_003",
+          "page": 3,
+          "start_offset": 5821,
+          "end_offset": 8791,
+          "char_count": 2970
+        },
+        {
+          "unit_id": "python_stdlib2_unit_004",
+          "page": 4,
+          "start_offset": 8791,
+          "end_offset": 11778,
+          "char_count": 2987
+        },
+        {
+          "unit_id": "python_stdlib2_unit_005",
+          "page": 5,
+          "start_offset": 11778,
+          "end_offset": 14592,
+          "char_count": 2814
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_venv",
+      "source": "venv.txt",
+      "source_path": "data/raw/tutorial/venv.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "bbfe8fe6247c7e8c587d549bec1a0096cc6a2128e69d1948a6f2cffc9e014003",
+      "normalized_char_count": 7421,
+      "unit_count": 3,
+      "units": [
+        {
+          "unit_id": "python_venv_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2757,
+          "char_count": 2757
+        },
+        {
+          "unit_id": "python_venv_unit_002",
+          "page": 2,
+          "start_offset": 2757,
+          "end_offset": 5591,
+          "char_count": 2834
+        },
+        {
+          "unit_id": "python_venv_unit_003",
+          "page": 3,
+          "start_offset": 5591,
+          "end_offset": 7421,
+          "char_count": 1830
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    },
+    {
+      "document_id": "python_whatnow",
+      "source": "whatnow.txt",
+      "source_path": "data/raw/tutorial/whatnow.txt",
+      "source_url": "https://docs.python.org/3.15/",
+      "version": "3.15",
+      "sha256": "a4b63da1a3e5f2aa5eee0a71b5d8050681da712bb5d0ea1e3f533ee46a8cd911",
+      "normalized_char_count": 3205,
+      "unit_count": 1,
+      "units": [
+        {
+          "unit_id": "python_whatnow_unit_001",
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 3205,
+          "char_count": 3205
+        }
+      ],
+      "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+      "license_url": "https://docs.python.org/3.15/license.html",
+      "accessed_at": "2026-11-13T23:00:00+07:00"
+    }
+  ],
+  "license_or_permission": "Python Software Foundation License Version 2 (PSF-2.0)",
+  "license_url": "https://docs.python.org/3.15/license.html",
+  "accessed_at": "2026-11-13T23:00:00+07:00"
+}

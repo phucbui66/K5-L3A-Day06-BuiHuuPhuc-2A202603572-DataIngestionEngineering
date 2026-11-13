@@ -1,0 +1,16 @@
+﻿strategy,question_id,score_0_2,reason
+A,T01,2,Rank 3 nêu biểu diễn nhị phân của 1/10 chỉ xấp xỉ; đủ trả lời.
+A,T02,1,"Có ví dụ pop() hoặc del, nhưng thiếu so sánh trực tiếp del theo chỉ số và giá trị trả về của pop()."
+A,T03,2,Rank 1 nói rõ datetime hỗ trợ đối tượng timezone-aware.
+A,T04,2,Rank 1 ghi rõ F3 vào paste mode và nhấn lại để về prompt.
+A,T05,0,Top-3 không chứa giải thích về responsiveness khi chạy tác vụ nền.
+B,T01,0,Top-3 không giải thích vì sao phân số thập phân không biểu diễn chính xác.
+B,T02,1,"Có ví dụ pop() hoặc del, nhưng thiếu so sánh trực tiếp del theo chỉ số và giá trị trả về của pop()."
+B,T03,2,Rank 1 nói rõ datetime hỗ trợ đối tượng timezone-aware.
+B,T04,0,Top-3 không có hướng dẫn F3.
+B,T05,0,Top-3 không chứa giải thích về responsiveness khi chạy tác vụ nền.
+C,T01,0,Top-3 không giải thích vì sao phân số thập phân không biểu diễn chính xác.
+C,T02,1,"Có ví dụ pop() hoặc del, nhưng thiếu so sánh trực tiếp del theo chỉ số và giá trị trả về của pop()."
+C,T03,2,Rank 1 nói rõ datetime hỗ trợ đối tượng timezone-aware.
+C,T04,0,Top-3 không có hướng dẫn F3.
+C,T05,2,Rank 3 mô tả rõ threading chạy tác vụ nền và ứng dụng tiếp tục nhận input.

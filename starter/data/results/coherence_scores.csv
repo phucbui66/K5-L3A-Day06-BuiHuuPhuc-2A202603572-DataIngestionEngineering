@@ -1,0 +1,31 @@
+﻿strategy,position,score,reason
+A,1,0,Cut in middle of word
+A,2,0,Starts in middle of sentence
+A,3,0,Cuts start and end of explanation
+A,4,0,Ends in middle of sentence
+A,5,0,Incomplete exception example
+A,6,0,Cuts explanation at both ends
+A,7,0,Incomplete section context
+A,8,0,Starts and ends mid-explanation
+A,9,0,Cuts doctest explanation
+A,10,0,Fragment of previous sentence
+B,1,1,Complete introductory paragraph
+B,2,1,Complete explanation
+B,3,1,Complete explanation and examples
+B,4,1,Readable list operation examples
+B,5,1,Complete explanation
+B,6,0,Ends inside for-loop example
+B,7,0,Isolated sentence fragment
+B,8,0,Isolated sentence fragment
+B,9,1,Readable datetime examples
+B,10,1,Complete FAQ and footnote text
+C,1,1,Complete introductory paragraph
+C,2,1,Complete explanation
+C,3,1,Complete explanation and examples
+C,4,1,Readable list operation examples
+C,5,1,Complete explanation
+C,6,0,Ends inside for-loop example
+C,7,0,Isolated sentence fragment
+C,8,0,Isolated sentence fragment
+C,9,1,Readable datetime examples
+C,10,1,Complete FAQ and footnote text

@@ -1,0 +1,233 @@
+[
+  {
+    "question_id": "D01",
+    "question": "Trong Python, nhánh elif và else của if có bắt buộc không?",
+    "answer": "Có thể có 0 hoặc nhiều elif; else là tùy chọn.",
+    "gold_sources": [
+      {
+        "document_id": "python_controlflow",
+        "source": "controlflow.txt",
+        "page": 1,
+        "unit_id": "python_controlflow_unit_001"
+      }
+    ],
+    "gold_evidence": "There can be zero or more \"elif\" parts, and the \"else\" part is\noptional.  The keyword '\"elif\"' is short for 'else if', and is useful\nto avoid excessive indentation.  An  \"if\" ... \"elif\" ... \"elif\" ...\nsequence is a substitute for the \"switch\" or \"case\" statements found\nin other languages.\n\nIf you're comparing the same value to several con",
+    "filter": null
+  },
+  {
+    "question_id": "D02",
+    "question": "Tại sao range() tiết kiệm bộ nhớ hơn danh sách tạo sẵn?",
+    "answer": "range() tạo đối tượng iterable cung cấp lần lượt các phần tử khi lặp, không tạo toàn bộ danh sách.",
+    "gold_sources": [
+      {
+        "document_id": "python_controlflow",
+        "source": "controlflow.txt",
+        "page": 2,
+        "unit_id": "python_controlflow_unit_002"
+      }
+    ],
+    "gold_evidence": "In many ways the object returned by \"range()\" behaves as if it is a\nlist, but in fact it isn't. It is an object which returns the\nsuccessive items of the desired sequence when you iterate over it, but\nit doesn't really make the list, thus saving space.\n\nWe say such an object is *iterable*, that is, suitable as a target for\nfunctions and c",
+    "filter": {
+      "section": "controlflow"
+    }
+  },
+  {
+    "question_id": "D03",
+    "question": "Lệnh break và continue khác nhau thế nào?",
+    "answer": "break thoát vòng lặp bao quanh gần nhất; continue chuyển sang lượt lặp kế tiếp.",
+    "gold_sources": [
+      {
+        "document_id": "python_controlflow",
+        "source": "controlflow.txt",
+        "page": 2,
+        "unit_id": "python_controlflow_unit_002"
+      }
+    ],
+    "gold_evidence": "The \"break\" statement breaks out of the innermost enclosing \"for\" or\n\"while\" loop:\n\n   >>> for n in range(2, 10):\n   ...     for x in range(2, n):\n   ...         if n % x == 0:\n   ...             print(f\"{n} equals {x} * {n//x}\")\n   ...             break\n   ...\n   4 equals 2 * 2\n   6 equals 2 * 3\n   8 equals 2 * 4\n   9 equals 3 * 3\n\nThe \"",
+    "filter": null
+  },
+  {
+    "question_id": "D04",
+    "question": "Khi nào else của vòng lặp for được thực thi?",
+    "answer": "Khi vòng lặp kết thúc mà không gặp break.",
+    "gold_sources": [
+      {
+        "document_id": "python_controlflow",
+        "source": "controlflow.txt",
+        "page": 3,
+        "unit_id": "python_controlflow_unit_003"
+      }
+    ],
+    "gold_evidence": "When used with a loop, the \"else\" clause has more in common with the\n\"else\" clause of a \"try\" statement than it does with that of \"if\"\nstatements: a \"try\" statement's \"else\" clause runs when no exception\noccurs, and a loop's \"else\" clause runs when no \"break\" occurs. For\nmore on the \"try\" statement and exceptions, see Handling Exceptions.",
+    "filter": null
+  },
+  {
+    "question_id": "D05",
+    "question": "Trong match-case, ký hiệu _ có ý nghĩa gì?",
+    "answer": "_ là wildcard, luôn khớp khi được xét.",
+    "gold_sources": [
+      {
+        "document_id": "python_controlflow",
+        "source": "controlflow.txt",
+        "page": 4,
+        "unit_id": "python_controlflow_unit_004"
+      }
+    ],
+    "gold_evidence": "Note the last block: the \"variable name\" \"_\" acts as a *wildcard* and\nnever fails to match.\n\nYou can combine several literals in a single pattern using \"|\" (\"or\"):\n\n   case 401 | 403 | 404:\n       return \"Not allowed\"\n\nPatterns can look like unpacking assignments, and can be used to bind\nvariables:\n\n   # point is an (x, y) tuple\n   match",
+    "filter": null
+  },
+  {
+    "question_id": "D06",
+    "question": "Phương thức __init__ được gọi khi nào?",
+    "answer": "Được tự động gọi khi tạo instance nếu lớp định nghĩa __init__.",
+    "gold_sources": [
+      {
+        "document_id": "python_classes",
+        "source": "classes.txt",
+        "page": 5,
+        "unit_id": "python_classes_unit_005"
+      }
+    ],
+    "gold_evidence": "When a class defines an \"__init__()\" method, class instantiation\nautomatically invokes \"__init__()\" for the newly created class\ninstance.  So in this example, a new, initialized instance can be\nobtained by:\n\n   x = MyClass()\n\nOf course, the \"__init__()\" method may have arguments for greater\nflexibility.  In that case, arguments given to t",
+    "filter": null
+  },
+  {
+    "question_id": "D07",
+    "question": "Vì sao không nên dùng list mutable làm class variable cho dữ liệu riêng từng đối tượng?",
+    "answer": "Vì danh sách đó được chia sẻ giữa các instance; nên dùng instance variable.",
+    "gold_sources": [
+      {
+        "document_id": "python_classes",
+        "source": "classes.txt",
+        "page": 7,
+        "unit_id": "python_classes_unit_007"
+      }
+    ],
+    "gold_evidence": "As discussed in A Word About Names and Objects, shared data can have\npossibly surprising effects involving *mutable* objects such as lists\nand dictionaries. For example, the *tricks* list in the following code\nshould not be used as a class variable because just a single list\nwould be shared by all *Dog* instances:\n\n   class Dog:\n\n       t",
+    "filter": {
+      "section": "classes"
+    }
+  },
+  {
+    "question_id": "D08",
+    "question": "Tên self có phải từ khóa đặc biệt của Python không?",
+    "answer": "Không; self chỉ là quy ước đặt tên tham số đầu tiên của method.",
+    "gold_sources": [
+      {
+        "document_id": "python_classes",
+        "source": "classes.txt",
+        "page": 8,
+        "unit_id": "python_classes_unit_008"
+      }
+    ],
+    "gold_evidence": "Often, the first argument of a method is called \"self\".  This is\nnothing more than a convention: the name \"self\" has absolutely no\nspecial meaning to Python.  Note, however, that by not following the\nconvention your code may be less readable to other Python programmers,\nand it is also conceivable that a *class browser* program might be\nwr",
+    "filter": null
+  },
+  {
+    "question_id": "D09",
+    "question": "Điều gì báo hiệu iterator đã hết phần tử?",
+    "answer": "__next__() phát sinh StopIteration, báo cho for dừng lại.",
+    "gold_sources": [
+      {
+        "document_id": "python_classes",
+        "source": "classes.txt",
+        "page": 12,
+        "unit_id": "python_classes_unit_012"
+      }
+    ],
+    "gold_evidence": "raises a \"StopIteration\" exception which\ntells the \"for\" loop to terminate.  You can call the \"__next__()\"\nmethod using the \"next()\" built-in function; this example shows how it\nall works:\n\n   >>> s = 'abc'\n   >>> it = iter(s)\n   >>> it\n   <str_iterator object at 0x10c90e650>\n   >>> next(it)\n   'a'\n   >>> next(it)\n   'b'\n   >>> next(it)",
+    "filter": null
+  },
+  {
+    "question_id": "D10",
+    "question": "Python phân biệt hai loại lỗi cơ bản nào trong phần Errors and Exceptions?",
+    "answer": "Syntax errors và exceptions.",
+    "gold_sources": [
+      {
+        "document_id": "python_errors",
+        "source": "errors.txt",
+        "page": 1,
+        "unit_id": "python_errors_unit_001"
+      }
+    ],
+    "gold_evidence": "syntax errors* and\n*exceptions*.\n\n8.1. Syntax Errors\n==================\n\nSyntax errors, also known as parsing errors, are perhaps the most\ncommon kind of complaint you get while you are still learning Python:\n\n   >>> while True print('Hello world')\n     File \"<stdin>\", line 1\n       while True print('Hello world')\n                  ^^^^^",
+    "filter": null
+  },
+  {
+    "question_id": "D11",
+    "question": "Lệnh raise dùng để làm gì?",
+    "answer": "Chủ động phát sinh một exception được chỉ định.",
+    "gold_sources": [
+      {
+        "document_id": "python_errors",
+        "source": "errors.txt",
+        "page": 4,
+        "unit_id": "python_errors_unit_004"
+      }
+    ],
+    "gold_evidence": "The \"raise\" statement allows the programmer to force a specified\nexception to occur. For example:\n\n   >>> raise NameError('HiThere')\n   Traceback (most recent call last):\n     File \"<stdin>\", line 1, in <module>\n       raise NameError('HiThere')\n   NameError: HiThere\n\nThe sole argument to \"raise\" indicates the exception to be raised.\nThis",
+    "filter": null
+  },
+  {
+    "question_id": "D12",
+    "question": "Vì sao phải mở file ảnh JPEG ở binary mode?",
+    "answer": "Text mode tự chuyển đổi ký tự xuống dòng theo nền tảng, có thể làm hỏng dữ liệu nhị phân.",
+    "gold_sources": [
+      {
+        "document_id": "python_inputoutput",
+        "source": "inputoutput.txt",
+        "page": 5,
+        "unit_id": "python_inputoutput_unit_005"
+      }
+    ],
+    "gold_evidence": "In text mode, the default when reading is to convert platform-specific\nline endings (\"\\n\" on Unix, \"\\r\\n\" on Windows) to just \"\\n\".  When\nwriting in text mode, the default is to convert occurrences of \"\\n\"\nback to platform-specific line endings.  This behind-the-scenes\nmodification to file data is fine for text files, but will corrupt\nbin",
+    "filter": null
+  },
+  {
+    "question_id": "D13",
+    "question": "Serialization và deserialization trong JSON là gì?",
+    "answer": "Serialization chuyển dữ liệu thành biểu diễn chuỗi; deserialization khôi phục dữ liệu từ chuỗi.",
+    "gold_sources": [
+      {
+        "document_id": "python_inputoutput",
+        "source": "inputoutput.txt",
+        "page": 7,
+        "unit_id": "python_inputoutput_unit_007"
+      }
+    ],
+    "gold_evidence": "this process is called\n*serializing*.  Reconstructing the data from the string representation\nis called *deserializing*.  Between serializing and deserializing, the\nstring representing the object may have been stored in a file or data,\nor sent over a network connection to some distant machine.\n\nNote:\n\n  The JSON format is commonly used by",
+    "filter": null
+  },
+  {
+    "question_id": "D14",
+    "question": "Tại sao mã xử lý dòng lệnh trong module có thể không chạy khi import?",
+    "answer": "Vì mã được đặt trong nhánh chỉ chạy khi module là file main.",
+    "gold_sources": [
+      {
+        "document_id": "python_modules",
+        "source": "modules.txt",
+        "page": 3,
+        "unit_id": "python_modules_unit_003"
+      }
+    ],
+    "gold_evidence": "you can make the file usable as a script as well as an importable\nmodule, because the code that parses the command line only runs if the\nmodule is executed as the \"main\" file:\n\n   $ python fibo.py 50\n   0 1 1 2 3 5 8 13 21 34\n\nIf the module is imported, the code is not run:\n\n   >>> import fibo\n   >>>\n\nThis is often used either to provide",
+    "filter": null
+  },
+  {
+    "question_id": "D15",
+    "question": "Kích hoạt virtual environment ảnh hưởng đến lệnh python như thế nào?",
+    "answer": "Nó thay đổi môi trường và prompt để lệnh python dùng bản cài Python của virtual environment đó.",
+    "gold_sources": [
+      {
+        "document_id": "python_venv",
+        "source": "venv.txt",
+        "page": 2,
+        "unit_id": "python_venv_unit_002"
+      }
+    ],
+    "gold_evidence": "Activating the virtual environment will change your shell's prompt to\nshow what virtual environment you're using, and modify the environment\nso that running \"python\" will get you that particular version and\ninstallation of Python. For example:\n\n   $ source ~/envs/tutorial-env/bin/activate\n   (tutorial-env) $ python\n   Python 3.5.1 (defaul",
+    "filter": {
+      "section": "venv"
+    }
+  }
+]
